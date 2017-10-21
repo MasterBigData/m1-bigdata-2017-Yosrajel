@@ -42,20 +42,16 @@ public boolean IsSameAs(Point p) {
 return (p.x==this.x && p.y==this.y) ;}
 
 
-
 public static void main () {
 	Point p1=new Point(1,2);
 	Point p2=p1;
 	Point p3=new Point(1,2);
-/*	System.out.println(p1==p2);
-	System.out.println(p1==p3);*/
-	
+    System.out.println(p1==p2);
+	System.out.println(p1==p3);
+	/*le systeme va pointer les cases mémoires et afficher un True pour p1==p2 et un false pour p1==p3*/
 	ArrayList<Point>list=new ArrayList<>();
 	list.add(p1);
-	list.add(p2);
-	list.add(p3);
 	System.out.println(list.indexOf(p2));
 	System.out.println(list.indexOf(p3));}}
-/*3)indexof retourne l'indice des points p2 et p3,or le probleme c'est que ces deux points ne sont pas ajouté 
- * à la liste*/
+/*3)indexof retourne l'indice des points s'l existe sinon(-1)*/
 

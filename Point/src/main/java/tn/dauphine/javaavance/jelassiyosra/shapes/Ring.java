@@ -9,13 +9,21 @@ public class Ring extends Circle {
 		this.ri=ri;
 	}
 	public boolean equals(Circle c)
-	{return (this.r==c.r)&&(this.ri==ri);}
+	{return (this.centre==c.centre)&&(this.r==c.r)&&(this.ri==ri);}
 	
-	/*ça va afficher un hashcode*/
+	public boolean contains(Point p) {
+	return super.contains(p)	;	
+	}
+    
+	public boolean contains(Point p,Ring ...rings) {
+		for(Ring r1 : rings) {
+			return super.contains(p)==true;}		
+		}
+	
 	
 	public static void main(String[] args) {
 		Point p=new Point (1,2);
 		Circle c=new Circle(p,1);
 		System.out.println(c.toString() +"ri");
-	}
+	}/*afficher hashcode*/
 }

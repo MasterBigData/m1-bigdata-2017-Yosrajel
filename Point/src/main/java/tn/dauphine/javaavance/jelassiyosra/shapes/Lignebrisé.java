@@ -1,12 +1,10 @@
 package tn.dauphine.javaavance.jelassiyosra.shapes;
 
 import java.util.LinkedList;
-/*Exercice 3*/
+
 public class Lignebrisé {
 	private int nb;
 	Point [] Ligne; 
-	LinkedList Ligne2;
-
 	
 	public Lignebrisé(int NB)
 	 {Ligne=new Point[NB];
@@ -31,15 +29,19 @@ public class Lignebrisé {
 	
 	public void contains (Point p) {
 		for(Point p1 : Ligne)  {
-		if (p==p1) {System.out.println("le point est contenu dans la ligne brisée");}
+		if (p.equals(p1)) {System.out.println("le point est contenu dans la ligne brisée");}
 		else System.out.println("le point n'est pas contenu dans la ligne brisée");}}
+/*une erreur survient et si on va ajouter un add(null),le tableau ajoute une case nulle*/
 	
-	public Lignebrisé() {
-		LinkedList Ligne2 = new LinkedList();}
 	
-	public int nbpoints2(){
-		return Ligne2.size();
+	public Lignebrisé() {		
+	LinkedList<Point> ligne2=new LinkedList<Point>();
+	Point p1=new Point (1,2);
+	ligne2.add(p1);
+	ligne2.size();
+	ligne2.contains(p1);
 	}
+    /*lorsequ'on a utilisé le Linkedlist ,on n'aurait plus besoin des méthodes pointcapacity,nbPoints et contains*/
 	}
 
 
