@@ -15,10 +15,7 @@ public class Ring extends Circle {
 	return super.contains(p)	;	
 	}
     
-	public boolean contains(Point p,Ring ...rings) {
-		for(Ring r1 : rings) {
-			return super.contains(p)==true;}		
-		}
+	
 	
 	
 	public static void main(String[] args) {

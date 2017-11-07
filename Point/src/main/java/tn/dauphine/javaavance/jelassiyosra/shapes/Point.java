@@ -19,7 +19,7 @@ public Point(float x,float y) {
 	int i=0;
 	this.x=x;
 	this.y=y;
-	i=i++;
+	i++;
 }
 
 /*5)la création de point au niveau du main se fait  sans paramètres*/
