@@ -1,16 +1,18 @@
 package tn.dauphine.javaavance.jelassiyosra.shapes.view;
-
-import java.awt.Graphics;
 import java.util.Observable;
 import java.util.Observer;
-
-import javax.swing.JPanel;
+import java.awt.Graphics;
+import javax.swing.*;
 
 import tn.dauphine.javaavance.jelassiyosra.shapes.model.world;
 
 public class MyDisplay extends JPanel implements Observer {
 
-	public world w;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public  world w;
 	
 		 public MyDisplay(world w) {
 		 this.w=w;
