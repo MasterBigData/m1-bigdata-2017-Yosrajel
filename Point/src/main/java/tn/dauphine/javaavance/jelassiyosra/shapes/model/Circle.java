@@ -6,22 +6,25 @@ public class Circle extends Shape {
     int r;
     	
 	protected Point centre; 	
+	
 	public Circle(Point centre,int r) {
         super(centre);
 		this.r=r;	
-		this.ds = new DrawCircle( this);
+		ds = new DrawCircle( this);
 
 		}
-	
+	public Point getcenter() {	
+		return centre;
+		}
 	public int getr() {	
 	return r;
 	}
 	
 	public String ToString()
-	{return 
-			"(le centre du cercle :"+centre+", de rayon "+r+")";}
-	
-	public void translate(int dx, int dy)
+	{
+		return (this.getCenter().ToString()+","+this.getr()+","+this.surface());
+	}
+		public void translate(int dx, int dy)
 	{dx=centre.getX()+dx;
 	 dy=centre.getY()+dy;
 	}
