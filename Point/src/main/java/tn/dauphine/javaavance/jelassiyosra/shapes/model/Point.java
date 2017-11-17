@@ -12,7 +12,12 @@ return x;
 public int getY()  {  
     return y;
   }
-
+public void setX(int x) {
+	this.x=x;
+	}
+public void setY(int y) {
+	this.y=y;
+}
 /*les variables x et y sont des variables de classe*/
 public Point(int x,int y) {
 
@@ -52,7 +57,12 @@ public static void main () {
 	ArrayList<Point>list=new ArrayList<>();
 	list.add(p1);
 	System.out.println(list.indexOf(p2));
-	System.out.println(list.indexOf(p3));}}
+	System.out.println(list.indexOf(p3));}
+
+
+	
+	
+}
 /*3)indexof retourne l'indice des points s'l existe sinon(-1)*/
 
 
