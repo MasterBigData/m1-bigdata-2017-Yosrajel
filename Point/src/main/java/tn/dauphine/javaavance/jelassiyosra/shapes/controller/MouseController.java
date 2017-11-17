@@ -1,23 +1,29 @@
 package tn.dauphine.javaavance.jelassiyosra.shapes.controller;
 
+import java.awt.Container;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+
+
 import java.awt.event.MouseMotionListener;
 
-import javax.swing.JPanel;
 
-public class MouseController extends JPanel implements MouseListener, MouseMotionListener {
+import tn.dauphine.javaavance.jelassiyosra.shapes.view.MyDisplay;
+
+public class MouseController implements MouseMotionListener {
+	public MyDisplay m;
+	int mx,my;
+
 	
+	public MouseController(MyDisplay m) {
+		this.m=m;
+	this.m.addMouseMotionListener(this);}
 	
- public int mx,my;
-	
-	public MouseController() {
-	addMouseMotionListener(this);
-	addMouseListener(this);}
 	
 	public void mouseMoved(MouseEvent e) {
-		mx= e.getX();
-		  my = e.getY();
+	this.m.w.shapes.get(0).getCenter().setX(e.getX());
+	this.m.w.shapes.get(0).getCenter().setY(e.getY());
+	this.m.repaint();
+
 	}
 
 	@Override
@@ -26,36 +32,5 @@ public class MouseController extends JPanel implements MouseListener, MouseMotio
 		
 	}
 
-	@Override
-	public void mouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseReleased(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-		
-
-
+	
 }
