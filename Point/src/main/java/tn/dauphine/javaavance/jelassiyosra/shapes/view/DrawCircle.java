@@ -12,7 +12,7 @@ public class DrawCircle extends DrawableShape {
 	}
 	
 		public void draw(Graphics g) {
-		g.drawOval(((Circle) s).getCenter().getX(), ((Circle) s).getCenter().getY(), ((Circle) s).getr(), ((Circle) s).getr());		
+		g.drawOval(((Circle) s).getCenter().getX()-((Circle) s).getr(), ((Circle) s).getCenter().getY()-((Circle) s).getr(), ((Circle) s).getr()*2, ((Circle) s).getr()*2);		
 		}
 
 }
