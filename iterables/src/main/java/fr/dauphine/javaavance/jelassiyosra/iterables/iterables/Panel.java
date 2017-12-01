@@ -6,7 +6,9 @@ import java.util.List;
 
 class Panel    {
 	
-
+    //la classe AbstractList permet un acces direct avec indice 
+	// les méthodes abstraites à implémenter sont get() et size()
+	
 	public static List<Integer> panel(final int a,final int b){
 	    return new AbstractList<Integer>() {
 			@Override
